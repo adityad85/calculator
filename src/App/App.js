@@ -5,6 +5,8 @@ import ButtonPanel from '../components/ButtonPanel';
 
 import calculate from '../helpers/calculate';
 
+import './index.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);

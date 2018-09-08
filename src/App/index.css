@@ -1,0 +1,131 @@
+body {
+  padding: 100px 0 0;
+}
+.calculator {
+  font-family: verdana;
+  font-size: 24px;
+  width: 304px;
+  margin: 0 auto;
+  background: #000;
+  display: grid;
+  grid-auto-columns: 75px;
+  grid-auto-rows: 75px;
+  grid-gap: 1px;
+  padding: 0 0 1px 1px;
+  grid-template-areas:
+    "ac plusmin perc divide"
+    "seven eight nine mult"
+    "four five six sub"
+    "one two three add"
+    "zero zero zero equals";
+}
+.btn {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.display-wrap {
+  font-family: verdana;
+  font-size: 24px;
+  width: 304px;
+  margin: 0 auto;
+  background: #000;
+  display: grid;
+  grid-auto-columns: 75px;
+  grid-auto-rows: 75px;
+  grid-gap: 1px;
+  padding: 0 0 1px 1px;
+  grid-template-areas: "display display display display";
+}
+.display {
+  font-family: "courier new", courier, monospace;
+  display: grid;
+  grid-area: display;
+  background: #4c4c4c;
+  color: #fff;
+  place-items: center end;
+  padding-right: 20px;
+}
+.clear {
+  background: #d6d6d6;
+  grid-area: clear;
+}
+.back {
+  background: #d6d6d6;
+  grid-area: back;
+}
+.divide {
+  background: #f59138;
+  grid-area: divide;
+}
+.seven {
+  background: #d6d6d6;
+  grid-area: seven;
+}
+.eight {
+  background: #d6d6d6;
+  grid-area: eight;
+}
+.nine {
+  background: #d6d6d6;
+  grid-area: nine;
+}
+.mult {
+  background: #f59138;
+  grid-area: mult;
+}
+.four {
+  background: #d6d6d6;
+  grid-area: four;
+}
+.five {
+  background: #d6d6d6;
+  grid-area: five;
+}
+.six {
+  background: #d6d6d6;
+  grid-area: six;
+}
+.sub {
+  background: #f59138;
+  grid-area: sub;
+}
+.three {
+  background: #d6d6d6;
+  grid-area: three;
+}
+.two {
+  background: #d6d6d6;
+  grid-area: two;
+}
+.one {
+  background: #d6d6d6;
+  grid-area: one;
+}
+.add {
+  background: #f59138;
+  grid-area: add;
+}
+.zero {
+  background: #d6d6d6;
+  grid-area: zero;
+}
+.equals {
+  background: #f59138;
+  grid-area: equals;
+}
+.plusmin {
+  background: #d6d6d6;
+  grid-area: plusmin;
+}
+.perc {
+  background: #d6d6d6;
+  grid-area: perc;
+}
+.ac {
+  background: #d6d6d6;
+  grid-area: ac;
+}

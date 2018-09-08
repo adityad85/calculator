@@ -8,17 +8,10 @@ class Button extends Component {
   };
 
   render() {
-    const { operation, zero, name } = this.props;
-    const className = [
-      'button-component',
-      operation ? 'operation' : '',
-      zero ? 'zero' : '',
-    ];
+    const { type, name } = this.props;
     return (
-      <div className={className.join(' ').trim()}>
-        <button type="button" onClick={this.handleClick}>
-          {name}
-        </button>
+      <div className={`${type} btn`} onClick={this.handleClick}>
+        {name}
       </div>
     );
   }
@@ -27,8 +20,7 @@ class Button extends Component {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
-  operation: PropTypes.string.isRequired,
-  zero: PropTypes.bool.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Button;
