@@ -10,7 +10,7 @@ class Button extends Component {
   render() {
     const { type, name } = this.props;
     return (
-      <div className={`${type} btn`} onClick={this.handleClick}>
+      <div role="button" className={`${type} btn`} onClick={this.handleClick}>
         {name}
       </div>
     );

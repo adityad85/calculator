@@ -50,82 +50,82 @@ body {
   padding-right: 20px;
 }
 .clear {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: clear;
 }
 .back {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: back;
 }
 .divide {
-  background: #f59138;
+  background: #0277BD;
   grid-area: divide;
 }
 .seven {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: seven;
 }
 .eight {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: eight;
 }
 .nine {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: nine;
 }
 .mult {
-  background: #f59138;
+  background: #0277BD;
   grid-area: mult;
 }
 .four {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: four;
 }
 .five {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: five;
 }
 .six {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: six;
 }
 .sub {
-  background: #f59138;
+  background: #0277BD;
   grid-area: sub;
 }
 .three {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: three;
 }
 .two {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: two;
 }
 .one {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: one;
 }
 .add {
-  background: #f59138;
+  background: #0277BD;
   grid-area: add;
 }
 .zero {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: zero;
 }
 .equals {
-  background: #f59138;
+  background: #0277BD;
   grid-area: equals;
 }
 .plusmin {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: plusmin;
 }
 .perc {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: perc;
 }
 .ac {
-  background: #d6d6d6;
+  background: #7f8c8d;
   grid-area: ac;
 }
