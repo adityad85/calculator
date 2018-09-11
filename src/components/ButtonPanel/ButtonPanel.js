@@ -1,16 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
+import { keys } from '../../constants/keysConstants';
 
 class ButtonPanel extends Component {
+  componentDidMount() {
+    const { reference } = this.props;
+    reference.current.focus();
+  }
+
   clickHandler = (buttonName) => {
     const { handleInteraction } = this.props;
     handleInteraction(buttonName);
   }
 
+  keyHandler = (e) => {
+    e.preventDefault();
+    const key = e.nativeEvent.keyCode;
+    const isValidKey = !!keys[key];
+    if (isValidKey) {
+      const keyName = keys[key];
+      this.clickHandler(keyName);
+    }
+  }
+
   render() {
+    const { reference } = this.props;
     return (
-      <div className="calculator">
+      <div className="calculator" onKeyDown={this.keyHandler} role="grid" ref={reference} tabIndex="0">
         <Button name="AC" clickHandler={this.clickHandler} type="ac" />
         <Button name="+/-" clickHandler={this.clickHandler} type="plusmin" />
         <Button name="%" clickHandler={this.clickHandler} type="perc" />
@@ -36,6 +53,7 @@ class ButtonPanel extends Component {
 
 ButtonPanel.propTypes = {
   handleInteraction: PropTypes.func.isRequired,
+  reference: PropTypes.shape({}).isRequired,
 };
 
 export default ButtonPanel;

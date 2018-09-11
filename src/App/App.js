@@ -10,6 +10,7 @@ import './index.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.refButtons = React.createRef();
     this.state = {
       total: null,
       next: null,
@@ -27,7 +28,10 @@ class App extends React.Component {
     return (
       <div className="root-container">
         <Display value={next || total || '0'} />
-        <ButtonPanel handleInteraction={this.handleInteraction} />
+        <ButtonPanel
+          handleInteraction={this.handleInteraction}
+          reference={this.refButtons}
+        />
       </div>
     );
   }

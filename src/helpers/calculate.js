@@ -57,18 +57,6 @@ const calculate = (object, buttonName) => {
     return {};
   }
 
-  if (buttonName === '.') {
-    if (object.next) {
-      if (object.next.includes('.')) {
-        return {};
-      }
-      return {
-        next: `${object.next}.`,
-      };
-    }
-    return { next: '0.' };
-  }
-
   if (buttonName === '=') {
     if (object.next && object.operation) {
       return {
@@ -88,6 +76,14 @@ const calculate = (object, buttonName) => {
       return { total: (-1 * parseFloat(object.total)).toString() };
     }
     return {};
+  }
+
+  if (object.operation === '/' && object.next === null) {
+    return {
+      total: evaluate(object.total, '1', object.operation),
+      next: null,
+      operation: buttonName,
+    };
   }
 
   if (object.operation) {
